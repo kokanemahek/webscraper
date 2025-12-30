@@ -1,0 +1,99 @@
+--- #meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: 2021 Ohio Revised Code
+  enforcer: OSFI
+  url: https://law.justia.com/codes/ohio/2021/title-13/chapter-1349/section-1349-61/
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels: [regulation, title, chapter, section, paragraph, clause, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- #scraper
+rules:
+  type: regulation
+  title: 2021 Ohio Revised Code
+  elements:
+    source:
+      - url: https://law.justia.com/codes/ohio/2021/title-13/chapter-1349/section-1349-61/
+      - css: div#main-content
+        css-filter: head > link , header#header , div#pills-wrapper , nav , div#crosslink-pill , div.pills-wrapper , div#primary-sidebar , div.disclaimer ,div.notification-banner , div#footer , script , noscript , iframe , div.pagination-v3 , div.block > div > span , div.block > div > strong , div.citation , style
+      - code: fetch_data
+      - code: cleaning_before_soup
+      - code: make_level
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      num:
+        css: h1
+        value: from-css(data-num)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          num:
+            css: h2
+            value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          elements:
+            source:
+              - css-slice: h3
+                css-filter: h1,h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              num:
+                css: h3
+                value: from-css(data-num)
+              title:
+                css: h3
+                value: from-css(text)
+              elements:
+                source:
+                  - css-slice: h4
+                    css-filter: h1,h2,h3
+                element:
+                  type:
+                    css: h4
+                    value: from-css(content_type)
+                  num:
+                    css: h4
+                    value: from-css(data-num)
+                  title:
+                    css: h4
+                    value: from-css(text)
+                elements:
+                  source:
+                    - css-slice: h5
+                      css-filter: h1,h2,h3,h4
+                  element:
+                    type:
+                      css: h5
+                      value: from-css(content_type)
+                    num:
+                      css: h5
+                      value: from-css(data-num)
+                    title:
+                      css: h5
+                      value: from-css(text)
+                    text:
+                      ignore: h5
+                      value: from-html

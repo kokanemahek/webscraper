@@ -1,0 +1,86 @@
+--- #meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: ACT ON CORPORATE GOVERNANCE OF FINANCIAL COMPANIES
+  enforcer:
+  url: https://www.law.go.kr/LSW/eng/engLsSc.do?menuId=2&section=lawNm&query=%EA%B8%88%EC%9C%B5%ED%9A%8C%EC%82%AC%EC%9D%98+%EC%A7%80%EB%B0%B0%EA%B5%AC%EC%A1%B0%EC%97%90+%EA%B4%80%ED%95%9C+%EB%B2%95%EB%A5%A0&x=0&y=0#liBgcolor0
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels: [regulation, chapter, article, paragraph, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- #scraper
+rules:
+  type: regulation
+  title: ACT ON CORPORATE GOVERNANCE OF FINANCIAL COMPANIES
+  elements:
+    source:
+      - url: https://www.law.go.kr/LSW/eng/engLsSc.do?menuId=2&section=lawNm&query=%EA%B8%88%EC%9C%B5%ED%9A%8C%EC%82%AC%EC%9D%98+%EC%A7%80%EB%B0%B0%EA%B5%AC%EC%A1%B0%EC%97%90+%EA%B4%80%ED%95%9C+%EB%B2%95%EB%A5%A0&x=0&y=0#liBgcolor0
+      - css: div#viewwrapCenter
+        css-filter: head , script , div#north-top , div#west-panel , div#west-panel-xsplit , div#ext-gen6 , div#listSaveLayer , div#engInfoSaveLayer, div#slideLeft , div.confnla4 , form#search , div#bodyContentTOP , div#bodySideContent > input , div#sideCenter > div.topinfoTxt , div.subtit1 , div.subtit2 , div#sideCenter > h2
+      - code: fetch_data
+      - code: make_clean_soup
+      - code: make_level
+      - code: del_extra_attr
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      num:
+        css: h1
+        value: from-css(data-num)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          css-slice: h2
+          css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          num:
+            css: h2
+            value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          elements:
+            source:
+              css-slice: h3
+              css-filter: h1,h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              num:
+                css: h3
+                value: from-css(data-num)
+              title:
+                css: h3
+                value: from-css(text)
+              elements:
+                source:
+                  css-slice: h4
+                  css-filter: h1,h2,h3
+                element:
+                  type:
+                    css: h4
+                    value: from-css(content_type)
+                  num:
+                    css: h4
+                    value: from-css(data-num)
+                  title:
+                    css: h4
+                    value: from-css(text)
+                  text:
+                    ignore: h4
+                    value: from-html

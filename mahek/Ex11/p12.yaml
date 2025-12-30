@@ -1,0 +1,101 @@
+#meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: Guidelines on the Incremental Default and Migration Risk Charge (IRC)
+  enforcer: OSFI
+  url: https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/market-counterparty-and-cva-risk/guidelines-incremental-default-and-migration-risk-charge-irc
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels:
+  [regulation, heading, title, subheading, subsubheading, paragraph, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- # scraper
+rules:
+  type: regulation
+  title: Guidelines on the Incremental Default and Migration Risk Charge (IRC)
+  elements:
+    source:
+      - url: https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/market-counterparty-and-cva-risk/guidelines-incremental-default-and-migration-risk-charge-irc
+      - css: main
+        css-filter: head , figure , aside
+      - code: fetch_data
+      - code: make_clean_soup
+      - code: make_level
+      - code: remove_extra_content
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          num:
+            css: h2
+            value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          text:
+            ignore: h2
+            value: from-html
+          elements:
+            source:
+              - css-slice: h3
+                css-filter: h1, h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              title:
+                css: h3
+                value: from-css(text)
+              # num:
+              #   css: h3
+              #   value: from-css(data-num)
+              elements:
+                source:
+                  - css-slice: h4
+                    css-filter: h1, h2, h3
+                element:
+                  type:
+                    css: h4
+                    value: from-css(content_type)
+                  title:
+                    css: h4
+                    value: from-css(text)
+                  num:
+                    css: h4
+                    value: from-css(data-num)
+                  elements:
+                    source:
+                      - css-slice: h5
+                        css-filter: h1, h2, h3, h4
+                    element:
+                      type:
+                        css: h5
+                        value: from-css(content_type)
+                      title:
+                        css: h5
+                        value: from-css(text)
+                      num:
+                        css: h5
+                        value: from-css(data-num)
+                      text:
+                        ignore: h5
+                        value: from-html

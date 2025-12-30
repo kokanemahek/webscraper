@@ -1,0 +1,146 @@
+#meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: "Proceeds of Crime (Money Laundering) and Terrorist Financing Act"
+  enforcer: OSFI
+  url: https://lois-laws.justice.gc.ca/eng/acts/P-24.501/FullText.html
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels:
+  [
+    regulation,
+    part,
+    heading,
+    subheading,
+    subsubheading,
+    subsubsubheading,
+    schedule,
+    division,
+    section,
+    paragraph,
+    intro,
+  ]
+allow_empty: [subsubsubheading]
+version: 16/12/2012
+
+--- # scraper
+rules:
+  type: regulation
+  title: Bank Act
+  elements:
+    source:
+      - url: https://lois-laws.justice.gc.ca/eng/acts/P-24.501/FullText.html
+      - css: main
+        css-filter: div , ul.ProvisionList , li , section , header , a , dl , dd , dfn , p.Definition > span , p.Definition > cite , main
+      - code: fetch_data
+      - code: cleaning_before_soup
+      - code: making_cleaning_soup
+      - code: make_level
+      - code: removing_extra_attr
+      - code: saving_result
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          # num:
+          #   css: h2
+          #   value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          text:
+            ignore: h2
+            value: from-html
+          elements:
+            source:
+              - css-slice: h3
+                css-filter: h1, h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              title:
+                css: h3
+                value: from-css(text)
+              # num:
+              #   css: h3
+              #   value: from-css(data-num)
+              elements:
+                source:
+                  - css-slice: h4
+                    css-filter: h1, h2, h3
+                element:
+                  type:
+                    css: h4
+                    value: from-css(content_type)
+                  title:
+                    css: h4
+                    value: from-css(text)
+                  # num:
+                  #   css: h4
+                  #   value: from-css(data-num)
+                  elements:
+                    source:
+                      - css-slice: h5
+                        css-filter: h1, h2, h3, h4
+                    element:
+                      type:
+                        css: h5
+                        value: from-css(content_type)
+                      title:
+                        css: h5
+                        value: from-css(text)
+                      num:
+                        css: h5
+                        value: from-css(data-num)
+                      elements:
+                      source:
+                        - css-slice: h6
+                          css-filter: h1, h2, h3, h4 , h6
+                      element:
+                        type:
+                          css: h6
+                          value: from-css(content_type)
+                        title:
+                          css: h6
+                          value: from-css(text)
+                        # num:
+                        #   css: h6
+                        #   value: from-css(data-num)
+                        text:
+                          ignore: h6
+                          value: from-html
+                        elements:
+                          source:
+                            - css-slice: h7
+                              css-filter: h1, h2, h3, h4 , h6 ,h7
+                          element:
+                            type:
+                              css: h7
+                              value: from-css(content_type)
+                            title:
+                              css: h7
+                              value: from-css(text)
+                            num:
+                              css: h7
+                              value: from-css(data-num)
+                            text:
+                              ignore: h7
+                              value: from-html

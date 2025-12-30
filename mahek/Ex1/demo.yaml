@@ -1,0 +1,84 @@
+--- #meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: 2025 Minnesota Statutes
+  enforcer: OSFI
+  url: https://www.revisor.mn.gov/statutes/cite/325g.53
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels: [regulation, section, subdivision, paragraph, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- #scraper
+rules:
+  type: regulation
+  title: 2025 Minnesota Statutes
+  elements:
+    source:
+      - url: https://www.revisor.mn.gov/statutes/cite/325g.53
+      - css: div#legContainerMain
+        css-filter: div#breadcrumb, div#doc_nav div#resource_box, footer#legFooter, nav, form , h1#leg-title-text , h3 , ul , script , div#resource_box , a.skip-navigation , div.leg-brand-container , div.leg-banner , div#doc_nav , footer#legFooter , div.history , div#legContainerMain > div > div > div > div > p, a.permalink , head > link
+      - code: cleaning_data
+      - code: make_level
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      num:
+        css: h1
+        value: from-css(data-num)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          num:
+            css: h2
+            value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+        elements:
+          source:
+            - css-slice: h3
+              css-filter: h1,h2
+          element:
+            type:
+              css: h3
+              value: from-css(content_type)
+            num:
+              css: h3
+              value: from-css(data-num)
+            title:
+              css: h3
+              value: from-css(text)
+          elements:
+            source:
+              - css-slice: h4
+                css-filter: h1,h2,h3
+            element:
+              type:
+                css: h4
+                value: from-css(content_type)
+              num:
+                css: h4
+                value: from-css(data-num)
+              title:
+                css: h4
+                value: from-css(text)
+              text:
+                ignore: h4
+                value: from-html

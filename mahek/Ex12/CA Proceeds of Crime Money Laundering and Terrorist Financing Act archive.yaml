@@ -1,0 +1,176 @@
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: "Proceeds of Crime (Money Laundering) and Terrorist Financing Act"
+  enforcer: OSFI
+  url: https://lois-laws.justice.gc.ca/eng/acts/P-24.501/FullText.html
+content-on-first-level: True
+no-label: [debug, part]
+no-label-unwrap: [part]
+levels: [regulation, part, section, subsection, paragraph, intro]
+allow_empty: [subsection]
+version:
+  source:
+    url: https://lois-laws.justice.gc.ca/eng/acts/P-24.501/FullText.html
+  version:
+    code: latest_version_date
+    value: from-code
+  format: "%Y-%m-%d"
+citation-duplicates:
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 5 - PART 1 Record Keeping, Verifying Identity, Reporting of Suspicious Transactions and Registration section 7 - Reporting and Other Requirements subsection Limitation"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 5 - PART 1 Record Keeping, Verifying Identity, Reporting of Suspicious Transactions and Registration section 7 - Reporting and Other Requirements subsection Limitation paragraph (2)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 5 - PART 1 Record Keeping, Verifying Identity, Reporting of Suspicious Transactions and Registration section 7 - Reporting and Other Requirements subsection Definition of correspondent banking relationship"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 5 - PART 1 Record Keeping, Verifying Identity, Reporting of Suspicious Transactions and Registration section 11.1 - Registration subsection 11.1 - Application and Revocation subsection Revocation of registration"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 5 - PART 1 Record Keeping, Verifying Identity, Reporting of Suspicious Transactions and Registration section 11.1 - Registration subsection 11.1 - Application and Revocation subsection Revocation of registration paragraph (2)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 11.41 - PART 1.1 Protection of Canada’s Financial System section 11.49 - Limitation and Prohibition of Financial Transactions subsection Relevant circumstances"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 11.8 - PART 2 Reporting of Currency and Monetary Instruments section 24 - Review and Appeal subsection Conditions for granting application"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 11.8 - PART 2 Reporting of Currency and Monetary Instruments section 24 - Review and Appeal subsection Notice of decision"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 11.8 - PART 2 Reporting of Currency and Monetary Instruments section 24 - Review and Appeal subsection Limit on amount paid"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 52 - Disclosure of Information subsection Clarification"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 52 - Disclosure of Information subsection Clarification paragraph (2)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Exception"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Recording of reasons for decision"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Definition of designated information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Recording of reasons for decision"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Publication"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Definition of designated information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Order for disclosure of information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Service of order"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Extension of period for compliance with order"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Objection to disclosure of information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Determination of objection"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Judge may examine information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Limitation period"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Appeal to Federal Court of Appeal"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Limitation period for appeal"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Special rules for hearings"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Ex parte representations"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Copies"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Application"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Order for disclosure of information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Order for disclosure of information paragraph (3)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Execution in another province"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Service of order"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Service of order paragraph (5)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Extension of period for compliance with order"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Extension of period for compliance with order paragraph (6)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Objection to disclosure of information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Objection to disclosure of information paragraph (7)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Determination of objection"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Determination of objection paragraph (8)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Judge may examine information"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Judge may examine information paragraph (9)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Limitation period"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Limitation period paragraph (10)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Appeal to Federal Court of Appeal"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Appeal to Federal Court of Appeal paragraph (11)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Limitation period for appeal"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Limitation period for appeal paragraph (12)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Special rules for hearings"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Special rules for hearings paragraph (13)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Ex parte representations"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Ex parte representations paragraph (14)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Copies"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Copies paragraph (15)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Definition of judge"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 55 - Disclosure and Use of Information subsection Definition of judge paragraph (16)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Prohibition"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Compliance of persons or entities"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation paragraph (2)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation paragraph (3)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation paragraph (2)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 40 - PART 3 Financial Transactions and Reports Analysis Centre of Canada section 62 - Compliance Measures subsection Limitation paragraph (3)"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 73.1 - PART 4.1 Notices of Violation, Compliance Agreements and Penalties section 73.21 - Appeal to Federal Court subsection Appeal — no notice of decision"
+  - "regulation Proceeds of Crime (Money Laundering) and Terrorist Financing Act part 74 - PART 5 Offences and Punishment subsection Punishment"
+
+--- # scraper
+rules:
+  type: regulation
+  title: "Proceeds of Crime (Money Laundering) and Terrorist Financing Act"
+  elements:
+    source:
+      - url: https://lois-laws.justice.gc.ca/eng/acts/P-24.501/FullText.html
+      - css: div.docContents
+        css-filter: p.AssentedDate, h2.Title-of-Act, p.ChapterNumber, sup, span.wb-invisible, ul.HistoricalNote, div.PITLink, p.Footnote, dt
+      - code: clean_content
+      - code: mark_types
+      - code: identify_level
+      - css-slice: h1
+      - code: remove_slicer
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      # num:
+      #   css: h1
+      #   value: from-css(data-num)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          # num:
+          #   css: h2
+          #   value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          elements:
+            source:
+              - css-slice: h3
+                css-filter: h1, h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              title:
+                css: h3
+                value: from-css(text)
+              # num:
+              #   css: h3
+              #   value: from-css(data-num)
+              elements:
+                source:
+                  - css-slice: h4
+                    css-filter: h1, h2, h3
+                element:
+                  type:
+                    css: h4
+                    value: from-css(content_type)
+                  title:
+                    css: h4
+                    value: from-css(text)
+                  # num:
+                  #   css: h4
+                  #   value: from-css(data-num)
+                  elements:
+                    source:
+                      - css-slice: h5
+                        css-filter: h1, h2, h3, h4
+                    element:
+                      type:
+                        css: h5
+                        value: from-css(content_type)
+                      title:
+                        css: h5
+                        value: from-css(text)
+                      # num:
+                      #   css: h5
+                      #   value: from-css(data-num)
+                      text:
+                        ignore: h5
+                        value: from-html

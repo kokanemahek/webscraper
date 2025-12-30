@@ -1,0 +1,72 @@
+--- #meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: "Proceeds of Crime (Money Laundering) and Terrorist Financing Act"
+  enforcer: OSFI
+  url: https://www.elegislation.gov.hk/hk/cap405
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels: [regulation, part, section, paragraph, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- # scraper
+rules:
+  type: regulation
+  title: "Proceeds of Crime (Money Laundering) and Terrorist Financing Act"
+  elements:
+    source:
+      - url: https://www.elegislation.gov.hk/hk/cap405
+      - css: div#Content
+        css-filter: head , script ,  div#Header , div#MESSAGE_ , div#LEG_PREVIEW , div#LegDetailsWrapper , div#Timeline , div#searchWithinCapContainer , div#TopToolBar0 , div#TopToolBar , div#ViewDividerWrapper , div.left-pane , div#ProgressBar , h3.leg-content-header , div.loading-top , div#BottomToolBar , div.portlet-header ,  div.hklm_meta, div.panel , ul.accordion , div#WCAGLogo , img
+      - code: fetch_data
+      - code: make_clean_soup
+      - code: make_level
+      - code: del_extra_content
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      num:
+        css: h1
+        value: from-css(data-num)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          num:
+            css: h2
+            value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          elements:
+            source:
+              - css-slice: h3
+                css-filter: h1, h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              title:
+                css: h3
+                value: from-css(text)
+              num:
+                css: h3
+                value: from-css(data-num)
+              text:
+                ignore: h3
+                value: from-html

@@ -1,0 +1,71 @@
+--- #meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: Finansinspektionens författningssamling
+  enforcer: OSFI
+  url: https://www.fi.se/contentassets/f2e92a7451ee4da397605704a6e5b6cc/fs1149k---ny-konsoliderad-2025-09-16.pdf
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels: [regulation, chapter, heading, section, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- # scraper
+rules:
+  type: Act
+  title: Finansinspektionens författningssamling
+  elements:
+    source:
+      - url: https://www.fi.se/contentassets/f2e92a7451ee4da397605704a6e5b6cc/fs1149k---ny-konsoliderad-2025-09-16.pdf
+      - css: div#Content
+        css-filter: aside , figure
+      - code: fetch_data
+      - code: make_clean_soup
+      - code: make_level
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      num:
+        css: h1
+        value: from-css(data-num)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          num:
+            css: h2
+            value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          elements:
+            source:
+              - css-slice: h3
+                css-filter: h1, h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              title:
+                css: h3
+                value: from-css(text)
+              num:
+                css: h3
+                value: from-css(data-num)
+              text:
+                ignore: h3
+                value: from-html

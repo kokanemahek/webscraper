@@ -1,0 +1,72 @@
+--- #meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: Konkurslag (1987:672)
+  enforcer: OSFI
+  url: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konkurslag-1987672_sfs-1987-672/
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels: [regulation, chapter, heading, paragraph, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- # scraper
+rules:
+  type: regulation
+  title: Konkurslag (1987:672)
+  elements:
+    source:
+      - url: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konkurslag-1987672_sfs-1987-672/
+      - css: main#content
+        css-filter: style , head , div#top , header , nav , footer , script, main > div > hgroup , div > section
+      - code: make_soup
+      - code: make_level
+      - code: remove_extra_content
+      - code: del_extra_attr
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          # num:
+          #   css: h2
+          #   value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          text:
+            ignore: h2
+            value: from-html
+          elements:
+            source:
+              - css-slice: h3
+                css-filter: h1, h2
+            element:
+              type:
+                css: h3
+                value: from-css(content_type)
+              title:
+                css: h3
+                value: from-css(text)
+              num:
+                css: h3
+                value: from-css(data-num)
+              text:
+                ignore: h3
+                value: from-html

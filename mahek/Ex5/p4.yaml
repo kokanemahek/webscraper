@@ -1,0 +1,59 @@
+--- #meta
+content_provider:
+  name: OSFI
+  jurisdiction: CA
+  longname: Office of the superintendent of financial institutions
+  region: CA
+content:
+  name: Bekendtgørelse af lov om Digital Post fra offentlige afsendere
+  enforcer: OSFI
+  url: https://www.retsinformation.dk/eli/lta/2021/686
+content-on-first-level: True
+no-label: []
+no-label-unwrap: []
+levels: [regulation, heading, section, paragraph, intro]
+allow_empty: []
+version: 16/12/2012
+
+--- #scraper
+rules:
+  type: regulation
+  title: Bekendtgørelse af lov om Digital Post fra offentlige afsendere
+  elements:
+    source:
+      - url: https://www.retsinformation.dk/eli/lta/2021/686
+      - css: div.document-details-content
+        css-filter: script , head > meta , head > link , style.wt-noconflict , div#cookie-consent-banner , div.wt-cck--container , div#globan ,input#piwikProSiteID , input#piwikProSummariesSiteID , div#myModal , header#op-header , div#op-header-pdf , div.NavSearch , div.ecl-container , div#PP2 , div#PP2Contents , div#MainContent > div.PageTitle , nav#AffixSidebar , div#PP1Contents , div#PP3 , div#PP3Contents , div.PP3Contents , div#document1 > div.tabContent > div > table , p.reference , hr.separator , p.disclaimer ,  div#document1 > div.tabContent > div > p , div#document1 > div.tabContent > div > hr , div#PP4 , div.eli-container > p , div.eli-container > div#tit_1 , div.Wrapper > a[href="#MainContent"] , a[class~=linkToTop] , button#tocBtnMbl , button#tocHideBtnMbl , aside#TOC-off-canvas , canvas , footer , div.modificationTablePanel , div#enc_1 > p , p.modref , p > i
+      - code: fetch_data
+      - code: make_new_soup
+      - code: cleaning_data
+      - code: make_level
+      - code: remove_attr
+      - css-slice: h1
+    element:
+      type:
+        css: h1
+        value: from-css(content_type)
+      num:
+        css: h1
+        value: from-css(data-num)
+      title:
+        css: h1
+        value: from-css(text)
+      elements:
+        source:
+          - css-slice: h2
+            css-filter: h1
+        element:
+          type:
+            css: h2
+            value: from-css(content_type)
+          num:
+            css: h2
+            value: from-css(data-num)
+          title:
+            css: h2
+            value: from-css(text)
+          text:
+            ignore: h2
+            value: from-html
